@@ -1,0 +1,16 @@
+#https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-20-04
+
+sudo apt install certbot python3-certbot-apache
+
+sudo apache2ctl configtest
+
+sudo systemctl reload apache2
+
+sudo ufw status
+
+sudo ufw allow 'Apache Full'
+sudo ufw delete allow 'Apache'
+
+sudo ufw status
+
+sudo certbot --apache
